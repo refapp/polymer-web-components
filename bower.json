@@ -1,0 +1,21 @@
+{
+    "name": "polymer-web-components",
+    "version": "1.0.0",
+    "description": "Polymer Web Components",
+    "authors": [
+        "Ref App"
+    ],
+    "license": "Apache 2.0",
+    "main": "calculator-component.html",
+    "keywords": [
+        "polymer",
+        "web-components"
+    ],
+    "ignore": [
+        "**/.*",
+        "bower_components"
+    ],
+    "dependencies": {
+        "polymer": "Polymer/polymer#^1.0.0"
+    }
+}

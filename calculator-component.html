@@ -1,0 +1,79 @@
+<link rel='import' href='bower_components/polymer/polymer.html'>
+
+<dom-module id='calculator-component'>
+    <template>
+        <p>String Property: <span>{{stringProp}}</span></p>
+        <p>Boolean Property: <span>{{booleanProp}}</span></p>
+        <p>Object Property: <span>{{objectProp.key1}}</span></p>
+    </template>
+</dom-module>
+
+<!-- Registers custom element -->
+<script>
+    Polymer({
+        is: 'calculator-component',
+
+        //******************************************
+        // Calculator PROPERTIES
+        //******************************************
+
+        properties: {
+            
+            booleanProp: {
+                type: Boolean,
+                value: 'true'
+            },
+
+            stringProp: {
+                type: String,
+                value: 'StringValue'
+            },
+
+            objectProp: {
+                type: Object,
+                value: function() {
+                    return {
+                        key1: 'value1',
+                        key2: 'value2'
+                    };
+                }
+            }
+        },
+
+        //******************************************
+        // Calculator LIFECYCLE
+        //******************************************
+
+        ready: function() {
+            console.log('Ready called');
+        },
+
+        attached: function() {
+            console.log('Attached called');
+        },
+
+        detached: function() {
+            console.log('Detached called');
+        },
+
+        //******************************************
+        // Calculator BEHAVIOR
+        //******************************************
+
+        calcAdd: function(num1, num2) {
+            return num1 + num2;
+        },
+
+        calcSub: function(num1, num2) {
+            return num1 - num2;
+        },
+
+        calcMul: function(num1, num2) {
+            return num1 * num2;
+        },
+
+        calcDiv: function(num1, num2) {
+            return num1 / num2;
+        }
+    });
+</script>
