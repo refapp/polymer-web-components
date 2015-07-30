@@ -5,11 +5,29 @@
  		<title>Polymer Web Components</title>
     	
  		<script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+ 		<link rel="import" href="bower_components/google-map/google-map.html">
 		<link rel="import" href="calculator-component.html">
 	</head>
 
 	<body>
+ 
     	<calculator-component></calculator-component>
+		<script>
+			document.querySelector('calculator-component').calcAdd(1, 2);
+		</script>
+
+		<style>
+			google-map {
+				width: 300px;
+				height: 300px;
+  			}
+		</style>
+
+		<google-map latitude="37.77493" longitude="-122.41942" fit-to-markers>
+			<google-map-marker latitude="37.779" longitude="-122.3892" draggable="true" title="Go Giants!"></google-map-marker>
+			<google-map-marker latitude="37.777" longitude="-122.38911"></google-map-marker>
+		</google-map>
+	
 	</body>
 
 </html>
