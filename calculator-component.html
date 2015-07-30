@@ -2,9 +2,11 @@
 
 <dom-module id='calculator-component'>
     <template>
-        <p>String Property: <span>{{stringProp}}</span></p>
-        <p>Boolean Property: <span>{{booleanProp}}</span></p>
-        <p>Object Property: <span>{{objectProp.key1}}</span></p>
+        <p>String Property: <span>{{stringprop}}</span></p>
+        <p>Boolean Property: <span>{{booleanprop}}</span></p>
+        <p>Object Property: <span>{{objectprop.key1}}</span></p>
+
+        <content></content>
     </template>
 </dom-module>
 
@@ -19,17 +21,17 @@
 
         properties: {
             
-            booleanProp: {
+            booleanprop: {
                 type: Boolean,
                 value: 'true'
             },
 
-            stringProp: {
+            stringprop: {
                 type: String,
                 value: 'StringValue'
             },
 
-            objectProp: {
+            objectprop: {
                 type: Object,
                 value: function() {
                     return {
